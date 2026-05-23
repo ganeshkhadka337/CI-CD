@@ -20,5 +20,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Print date
+        run: date
+
+      - name: List files
+        run: ls -l
+
       - name: Run tests
         run: npm test
