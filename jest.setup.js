@@ -1,11 +1,7 @@
 const { TextEncoder, TextDecoder } = require('util')
+const matchers = require('@testing-library/jest-dom/matchers')
 
 global.TextEncoder = TextEncoder
 global.TextDecoder = TextDecoder
 
-global.MutationObserver = class MutationObserver {
-  disconnect() {}
-  observe() {}
-}
-
-require('@testing-library/jest-dom')
+expect.extend(matchers)
